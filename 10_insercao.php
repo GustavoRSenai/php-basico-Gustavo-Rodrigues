@@ -18,18 +18,6 @@
     </form>
 
     <?php
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        // Recebe os valores enviados pelo formulário
-        $nome = $_POST['nome'];
-        $email = $_POST['email'];
-        // Valida se os campos não estão vazios e o email é válido
-
-        if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        } else {
-            echo "<p style='color: red; '>Erro ao cadastrar o usuário, preencha todos os campos corretamente.</p>";
-        }
-    }
-    if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         // Verifica se o formulário foi enviado
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Recebe os valores enviados pelo formulário
@@ -45,18 +33,22 @@
             if ($conn->connect_error) {
                 die("Falha na conexão: " . $conn->connect_error);
             }
-            // Insere o registro no banco de dados
-            // Insere na tabela clientes os seguintes valores
-             $sql = "INSERT INTO clientes (nome, email) VALUES ('$nome', '$email')";
-            // confere se a variável 'sql' esta correta
-            if ($conn->query($sql) === TRUE) {
-                //exibe a mensagem
-                echo "<p style='color: green; '>Cliente cadastrado com sucesso!</p>";
-            } 
-            // Encerra a conexão
-            $conn->close();
-        }
-    }
-    ?>
+            if (!empty($nome) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                // Insere o registro no banco de dados
+                // Insere na tabela clientes os seguintes valores
+                $sql = "INSERT INTO clientes (nome, email) VALUES ('$nome', '$email')";
+                // confere se a variável 'sql' esta correta
+                if ($conn->query($sql) === TRUE) {
+                    //exibe a mensagem
+                    echo "<p style='color: green; '>Cliente cadastrado com sucesso!</p>";
+                } 
+                // Encerra a conexão
+                $conn->close();
+            } else {
+                echo "<p style='color: red; '>Erro ao cadastrar o usuário, preencha todos os campos corretamente.</p>";
+            }
+            }
+    
+?>
 </body>
 </html>
