@@ -3,7 +3,7 @@
 
 <?php
 // Conecta ao banco de dados
-$servername = "localhost";
+$servername = "localhost:3309";
 $username = "root";
 $password = "";
 $dbname = "exercicio";
