@@ -7,13 +7,13 @@
 <body>
     <form method="post" action="">
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" required><br>
+        <input type="text" name="nome" ><br>
 
         <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
+        <input type="email" name="email" ><br>
 
         <label for="mensagem">Mensagem:</label>
-        <textarea name="mensagem" required></textarea><br>
+        <textarea name="mensagem" ></textarea><br>
 
         <button type="submit">Enviar</button>
     </form>
