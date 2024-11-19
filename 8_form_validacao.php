@@ -32,7 +32,7 @@
         } else {
             echo "<p style='color: red; '>Por favor, preencha todos os campos corretamente.</p>";
         }
-}
+    }
 
     ?>
 </body>
