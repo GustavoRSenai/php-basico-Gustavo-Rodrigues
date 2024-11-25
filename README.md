@@ -1,4 +1,10 @@
-# PHP Básico
+# <img style="width: 50px;" src="https://github.com/user-attachments/assets/365a8660-072a-41e3-81a9-3fed73793ac3" alt="gato hacker" /> PHP Básico <img style="width: 50px;" src="https://github.com/user-attachments/assets/365a8660-072a-41e3-81a9-3fed73793ac3" alt="gato hacker" />
+
+
+<img style="width: 250px;" src="https://github.com/user-attachments/assets/2e04ff98-0003-4c68-9f47-f0348e96f36e" alt="Texto alternativo" />
+
+<br>
+<br>
 
 O repositório contém arquivos com estrutura referentes ao PHP Básico e como integrar O banco de dados e a programação SQL dentro de arquivos PHP.
 
